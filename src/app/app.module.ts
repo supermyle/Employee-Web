@@ -11,12 +11,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { EmployeesListComponent } from './components/employees/employees-list/employees-list.component';
+import { EmployeeListComponent } from './components/employee-list/employee-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EmployeesListComponent
+    EmployeeListComponent
   ],
   imports: [
     BrowserModule,

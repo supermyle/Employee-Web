@@ -6,11 +6,11 @@ import { Employee } from 'src/app/models/employee.model';
 import { EmployeeService } from 'src/app/services/employee.service';
 
 @Component({
-  selector: 'app-employees-list',
-  templateUrl: './employees-list.component.html',
-  styleUrls: ['./employees-list.component.css']
+  selector: 'app-employee-list',
+  templateUrl: './employee-list.component.html',
+  styleUrls: ['./employee-list.component.css']
 })
-export class EmployeesListComponent implements AfterViewInit {
+export class EmployeeListComponent implements AfterViewInit {
   displayedColumns: string[] = ['id', 'name', 'email', 'phone', 'salary', 'department'];
   dataSource: MatTableDataSource<Employee>;
 
