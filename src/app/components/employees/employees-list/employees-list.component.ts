@@ -20,10 +20,16 @@ export class EmployeesListComponent implements AfterViewInit {
   constructor(private employeeService: EmployeeService) {}
 
   ngAfterViewInit() {
-    this.employeeService.getAllEmployees().subscribe(data => {
-      this.dataSource = new MatTableDataSource(data);
-      this.dataSource.paginator = this.paginator;
-      this.dataSource.sort = this.sort;
+    this.employeeService.getAllEmployees()
+    .subscribe({
+      next: (data) => {
+        this.dataSource = new MatTableDataSource(data);
+        this.dataSource.paginator = this.paginator;
+        this.dataSource.sort = this.sort;
+      },
+      error: (response) => {
+        console.error(response);
+      }
     });
   }
 
