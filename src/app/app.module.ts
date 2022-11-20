@@ -7,16 +7,19 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSortModule } from '@angular/material/sort';
 import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EmployeeListComponent } from './components/employee-list/employee-list.component';
+import { AddEmployeeComponent } from './components/add-employee/add-employee.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EmployeeListComponent
+    EmployeeListComponent,
+    AddEmployeeComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +32,7 @@ import { EmployeeListComponent } from './components/employee-list/employee-list.
     MatFormFieldModule,
     MatSortModule,
     MatInputModule,
+    MatSelectModule,
     HttpClientModule
   ],
   providers: [],
