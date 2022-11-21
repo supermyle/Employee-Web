@@ -11,7 +11,7 @@ import { EmployeeService } from 'src/app/services/employee.service';
   styleUrls: ['./employee-list.component.css']
 })
 export class EmployeeListComponent implements AfterViewInit {
-  displayedColumns: string[] = ['id', 'name', 'email', 'phone', 'salary', 'department'];
+  displayedColumns: string[] = ['name', 'id', 'email', 'phone', 'salary', 'department'];
   dataSource: MatTableDataSource<Employee>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
