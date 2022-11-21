@@ -1,1 +1,46 @@
-<p>edit-employee works!</p>
+<form class="edit-employee-form" #form="ngForm" (ngSubmit)="updateEmployee()">
+    <mat-form-field appearance="fill">
+        <mat-label>Id</mat-label>
+        <input matInput name="id" [(ngModel)]="employeeDetails.id" readonly>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Ex. John Doe" name="name" 
+        [(ngModel)]="employeeDetails.name" required>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Ex. john.doe@email.com"
+        name="email" [(ngModel)]="employeeDetails.email" required>
+      </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label >Phone</mat-label>
+        <input matInput type="number" placeholder="Ex. 5555551234"
+        name="phone" [(ngModel)]="employeeDetails.phone" required>
+        <span matPrefix>+1 &nbsp;</span>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Salary</mat-label>
+        <input matInput type="number" placeholder="Ex. 70000"
+        name="salary" [(ngModel)]="employeeDetails.salary" required>
+        <span matPrefix>$ &nbsp;</span>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Department</mat-label>
+        <mat-select name="department" [(ngModel)]="employeeDetails.department" required>
+            <mat-option value="Software Development">Software Development</mat-option>
+            <mat-option value="Security">Security</mat-option>
+            <mat-option value="Sales">Sales</mat-option>
+            <mat-option value="Recruiter">Recruiter</mat-option>
+            <mat-option value="Information Technology">Information Technology</mat-option>
+            <mat-option value="Human Resources">Human Resources</mat-option>
+            <mat-option value="Emergency Services">Emergency Services</mat-option>
+            <mat-option value="Contractor">Contractor</mat-option>
+            <mat-option value="Claims">Claims</mat-option>
+            <mat-option value="COO">COO</mat-option>
+            <mat-option value="CFO">CFO</mat-option>
+            <mat-option value="CEO">CEO</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <button mat-raised-button color="primary">Save</button>
+</form>
