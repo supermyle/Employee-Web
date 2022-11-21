@@ -1,38 +1,41 @@
-<form class="add-employee-form">
+<form class="add-employee-form" #form="ngForm" (ngSubmit)="addEmployee()">
     <mat-form-field appearance="fill">
         <mat-label>Name</mat-label>
-        <input matInput placeholder="Ex. John Doe" required>
+        <input matInput placeholder="Ex. John Doe" name="name" 
+        [(ngModel)]="addEmployeeRequest.name" required>
     </mat-form-field>
     <mat-form-field appearance="fill">
         <mat-label>Email</mat-label>
-        <input matInput placeholder="Ex. john.doe@email.com" [formControl]="email" required>
-        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        <input matInput placeholder="Ex. john.doe@email.com"
+        name="email" [(ngModel)]="addEmployeeRequest.email" required>
       </mat-form-field>
     <mat-form-field appearance="fill">
         <mat-label >Phone</mat-label>
-        <input matInput type="number" placeholder="Ex. 5618672345" required>
+        <input matInput type="number" placeholder="Ex. 5555551234"
+        name="phone" [(ngModel)]="addEmployeeRequest.phone" required>
         <span matPrefix>+1 &nbsp;</span>
     </mat-form-field>
     <mat-form-field appearance="fill">
         <mat-label>Salary</mat-label>
-        <input matInput type="number" placeholder="Ex. 70000" required>
+        <input matInput type="number" placeholder="Ex. 70000"
+        name="salary" [(ngModel)]="addEmployeeRequest.salary" required>
         <span matPrefix>$ &nbsp;</span>
     </mat-form-field>
     <mat-form-field appearance="fill">
         <mat-label>Department</mat-label>
-        <mat-select>
-            <mat-option value="one">Software Development</mat-option>
-            <mat-option value="two">Security</mat-option>
-            <mat-option value="one">Sales</mat-option>
-            <mat-option value="one">Recruiter</mat-option>
-            <mat-option value="one">Information Technology</mat-option>
-            <mat-option value="one">Human Resources</mat-option>
-            <mat-option value="two">Emergency Services</mat-option>
-            <mat-option value="one">Contractor</mat-option>
-            <mat-option value="one">Claims</mat-option>
-            <mat-option value="one">COO</mat-option>
-            <mat-option value="one">CFO</mat-option>
-            <mat-option value="one">CEO</mat-option>
+        <mat-select name="department" [(ngModel)]="addEmployeeRequest.department">
+            <mat-option value="Software Development">Software Development</mat-option>
+            <mat-option value="Security">Security</mat-option>
+            <mat-option value="Sales">Sales</mat-option>
+            <mat-option value="Recruiter">Recruiter</mat-option>
+            <mat-option value="Information Technology">Information Technology</mat-option>
+            <mat-option value="Human Resources">Human Resources</mat-option>
+            <mat-option value="Emergency Services">Emergency Services</mat-option>
+            <mat-option value="Contractor">Contractor</mat-option>
+            <mat-option value="Claims">Claims</mat-option>
+            <mat-option value="COO">COO</mat-option>
+            <mat-option value="CFO">CFO</mat-option>
+            <mat-option value="CEO">CEO</mat-option>
         </mat-select>
     </mat-form-field>
     <button mat-raised-button color="primary">Save</button>

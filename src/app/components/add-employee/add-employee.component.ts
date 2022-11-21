@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
 import { Employee } from 'src/app/models/employee.model';
+import { EmployeeService } from 'src/app/services/employee.service';
 
 @Component({
   selector: 'app-add-employee',
@@ -13,24 +13,25 @@ export class AddEmployeeComponent implements OnInit {
     id: '',
     name: '',
     email: '',
-    phone: 0,
-    salary: 0,
+    phone: '',
+    salary: '',
     department: ''
   };
 
-  email = new FormControl('', [Validators.required, Validators.email]);
-
-  getErrorMessage() {
-    if (this.email.hasError('required')) {
-      return 'You must enter a value';
-    }
-
-    return this.email.hasError('email') ? 'Not a valid email' : '';
-  }
-
-  constructor() { }
+  constructor(private employeeService: EmployeeService) { }
 
   ngOnInit(): void {
   }
 
+  addEmployee() {
+    this.employeeService.addEmployee(this.addEmployeeRequest)
+    .subscribe({
+      next: (employee) => {
+        console.log(employee);
+      },
+      error: (response) => {
+        console.error(response);
+      }
+    });
+  }
 }

@@ -3,6 +3,6 @@ export interface Employee{
     name: string;
     email: string;
     phone: any;
-    salary: number;
+    salary: any;
     department: string;
 }
