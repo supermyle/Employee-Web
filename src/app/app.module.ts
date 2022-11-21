@@ -15,12 +15,14 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EmployeeListComponent } from './components/employee-list/employee-list.component';
 import { AddEmployeeComponent } from './components/add-employee/add-employee.component';
+import { EditEmployeeComponent } from './components/edit-employee/edit-employee.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeListComponent,
-    AddEmployeeComponent
+    AddEmployeeComponent,
+    EditEmployeeComponent
   ],
   imports: [
     BrowserModule,
