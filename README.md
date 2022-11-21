@@ -1,14 +1,21 @@
-# EmployeeWeb
+# Employee-Web
+Angular Employee Management System App Web Frontend
 
+## Employees table
+![Employee-Web-Employees](https://user-images.githubusercontent.com/31965406/202970414-b6dd4b4b-f024-472e-86c2-f17c17498aba.png)
+
+## Add employee
+![Employee-Web-Add](https://user-images.githubusercontent.com/31965406/202970475-1f6720b4-85a7-4dcc-a74c-d493659867b9.png)
+
+## Edit employee
+![Employee-Web-Edit](https://user-images.githubusercontent.com/31965406/202970546-34fda6e0-7dc8-4389-b7bf-552a28aec159.png)
+
+## Version
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.8.
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
